@@ -74,6 +74,11 @@ body {
     font-weight: bold;
 }
 
+.img-constrain{
+        width:100%;
+        max-width:400px;
+}
+
 .footer {
     text-align: left;
     padding: 10px;
