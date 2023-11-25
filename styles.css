@@ -89,6 +89,9 @@ body {
     border-bottom-right-radius: 5px;
     box-shadow: 0 2px 5px #f7dddde0;
 }
+ul{
+    list-style: none;
+}
 @media (max-width: 450px) {
     .container {
         padding: 10px;
