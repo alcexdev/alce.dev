@@ -1,24 +1,33 @@
-/* Base Styles */
-body, html {
+html {
+    box-sizing: border-box;
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
     color: #333;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Container */
 .container {
-    min-height: 100%;
-    max-width: 1200px;
-    position: relative;
+    flex: 1;
+    max-width: 900px;
+    width: 80%;
     margin: auto;
     padding: 20px;
-    padding-bottom: 60px;
 }
 
-/* Header */
 .header h1 {
     font-size: 2.4em;
     color: #333;
@@ -39,10 +48,10 @@ body, html {
 .nav a {
     text-decoration: none;
     color: #333;
-    font-size: 1.0em;
+    font-size: 1em;
 }
 
-/* Main content */
+
 .main {
     font-size: 1em;
     line-height: 1.6;
@@ -62,40 +71,76 @@ body, html {
     height: auto;
 }
 
-/* Blog Post List */
+ul li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.blog-post-item {
+    justify-content: space-between; 
+    align-items: center; 
+    font-size: 1em; 
+}
+
+.blog-post-item .post-date {
+    font-size: 0.8em;
+    color: #666;
+    margin-right: 0.5em; 
+    white-space: nowrap; 
+}
+
+.blog-post-item .post-link h3 {
+    font-size: 1em; 
+    white-space: nowrap; 
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+h3, p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.blog-post-item .post-link a {
+    text-decoration: none; 
+    color: #288bce; 
+}
+
+.blog-section-title {
+    font-size: 1.2em; 
+    color: #333; 
+    margin-bottom: 1em; 
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+ul li {
+    margin-bottom: 10px;
+}
+
 ul li a {
-    color: #0000EE; /* Standard link color */
+    color: #0000EE;
     text-decoration: none;
     font-size: 1em;
 }
 
-ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
 .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 60px; /* Height of the footer */
-    background: #f4f4f4;
+    background: #ffffff;
+    font-size: 10px;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
 
+@media screen and (max-width: 600px) {
     .nav ul {
         flex-direction: column;
         align-items: center;
@@ -112,4 +157,16 @@ ul li a:hover {
     .main h4 {
         font-size: 1.2em;
     }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
 }
