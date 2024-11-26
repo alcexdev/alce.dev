@@ -68,37 +68,40 @@ function loadParticles(theme) {
             "detect_on": "canvas",
             "events": {
                 "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
+                    "enable": false,
                 },
                 "onclick": {
-                    "enable": true,
-                    "mode": "push"
+                    "enable": false,
                 },
                 "resize": true
             },
             "modes": {
                 "grab": {
+                    "enable": false,
                     "distance": 400,
                     "line_linked": {
                         "opacity": 1
                     }
                 },
                 "bubble": {
+                    "enable": false,
                     "distance": 400,
-                    "size": 40,
+                    "size": 42,
                     "duration": 2,
                     "opacity": 8,
-                    "speed": 3
+                    "speed": 2
                 },
                 "repulse": {
+                    "enable": false,
                     "distance": 200,
                     "duration": 0.4
                 },
                 "push": {
+                    "enable": false,
                     "particles_nb": 4
                 },
                 "remove": {
+                    "enable": false,
                     "particles_nb": 2
                 }
             }
