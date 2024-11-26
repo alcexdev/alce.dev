@@ -2,78 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Elias Cedeno</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=VT323&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png"/>
 </head>
 <body>
-    <header class="header">
-        <div class="container-header">
-            <h1>Alan Elias Cedeno</h1>
-        </div>
-        <div class="container-nav">
-            <button class="menu-toggle">☰</button>
-            <nav class="navi">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="projects.html">projects</a></li>
-                    <li><a href="notes.html">notes</a></li>
-                    <li><a href="https://www.linkedin.com/in/alancedeno/" target="_blank">contact</a></li>
+    <div id="particles-js"></div>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="#home" class="logo">Alce</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="main-content">
-        <div class="container">
-            <section class="main">
-                <h2>Hello my name is <a href="#">Alan.</a></h2>
-                <hr>
-                <div class="sub-p">
-                <p>A Computer Science student in New York.</p>
-                <p>Software Developer, Hardware Enthusiast, Linux Enthusiast, sort of a great cook.</p>
-                <p>Currently exploring System Development and Design.</p>
-            </div>
-            </section>
-            <section class="main">
-                    <h2>Current Role</h2>
-                    <hr>
-                    <div class="sub-p">
-                        <h3>Level 3 Support Engineer</h3>
-                        <p>Supporting a wide range of systems, hardware, platforms.</p>
-                    </div>
-            </section>
-            <section class="main"> 
-                <h2>Standout Skills</h2>
-                <hr>
-                <div class="columns">
-                    <div class="column">
-                        <ul>
-                            <li>HTML & CSS</li>
-                            <li>Beginner C++</li>
-                            <li>Javascript</li>
-                            <li>PowerShell Scripting</li>
-                            <li>Python Scripting</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <ul>
-                            <li>Bash Scripting</li>
-                            <li>Server Administration</li>
-                            <li>Information Security</li>
-                            <li>Automation</li>
-                            <li>Networking</li>
-                        </ul>
+                <div class="theme-toggle" id="theme-toggle">
+                    <div class="toggle-switch">
+                        <div class="toggle-circle"></div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home">
+            <div class="home-content">
+                <div class="home-text">
+                    <h1>Hi! Welcome, I'm Alan!</h1>
+                    <p>Student | Support Engineer | Developer | Linux Enthusiast</p>
+                    <p>I'm a student of computer science focusing on software engineering. Currently, I'm working with C++, Javascript, and Python. I'm also experienced in web development, Linux, networking, and software engineering.</p>
+                    <div class="current-job">
+                        <i class="fa-solid fa-circle"></i>
+                        <p>Currently pursuing a Bachelor's degree in Computer Science while working as a service desk technician.</p>
+                    </div>
+                <!--
+                    <a href="#projects" class="scroll-btn">View My Projects</a>
+                -->
+                </div>
+                <div class="home-image">
+                    <img src="img/moose.png" alt="Styled Moose Logo" class="moose-image" id="moose-image">
+                </div>
+            </div>
+        </section>
+<!--
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                
+                <div class="project card">
+                    <h3>Project 1</h3>
+                    <p>A brief description of the project...</p>
+                    <a href="#" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project card">
+                    <h3>Project 2</h3>
+                    <p>A brief description of the project...</p>
+                    <a href="#" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project card">
+                    <h3>Project 3</h3>
+                    <p>A brief description of the project...</p>
+                    <a href="#" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project card">
+                    <h3>Project 4</h3>
+                    <p>A brief description of the project...</p>
+                    <a href="#" target="_blank">View on GitHub</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="homelab" class="homelab">
+            <h2>Homelab</h2>
+            <div class="homelab-content">
+                <div class="homelab-image">
+                    <img src="homelab.png" alt="Homelab Setup" class="homelab-img">
+                </div>
+                <div class="homelab-text">
+                    <p>Welcome to my homelab - my personal playground for technology exploration. Here, I experiment with different servers, networking equipment, and virtualization technologies to broaden my understanding and skills. My homelab consists of a range of devices, from simple Raspberry Pis to more robust servers running various services. This environment helps me tinker, learn, and apply knowledge in areas such as containerization, self-hosting applications, and network management. It’s an evolving part of my journey as a tech enthusiast and software engineer.</p>
+                </div>
+            </div>
+        </section>
+-->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out with any opportunities or just a friendly chat!</p>
+            <div class="social-links">
+                <a href="https://github.com/alcexdev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://bsky.app/profile/alcexdev.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
+                <a href="https://linkedin.com/in/alancedeno" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:alancedeno@outlook.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <p>2024 Alan Elias Cedeno</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
