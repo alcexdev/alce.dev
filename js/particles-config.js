@@ -76,12 +76,14 @@ function loadParticles(theme) {
             },
             "modes": {
                 "grab": {
+                    "enable": false,
                     "distance": 400,
                     "line_linked": {
                         "opacity": 1
                     }
                 },
                 "bubble": {
+                    "enable": false,
                     "distance": 400,
                     "size": 42,
                     "duration": 2,
@@ -89,13 +91,16 @@ function loadParticles(theme) {
                     "speed": 2
                 },
                 "repulse": {
+                    "enable": false,
                     "distance": 200,
                     "duration": 0.4
                 },
                 "push": {
+                    "enable": false,
                     "particles_nb": 4
                 },
                 "remove": {
+                    "enable": false,
                     "particles_nb": 2
                 }
             }
