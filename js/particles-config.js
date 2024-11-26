@@ -67,12 +67,10 @@ function loadParticles(theme) {
             "detect_on": "canvas",
             "events": {
                 "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
+                    "enable": false,
                 },
                 "onclick": {
-                    "enable": true,
-                    "mode": "push"
+                    "enable": false,
                 },
                 "resize": true
             },
