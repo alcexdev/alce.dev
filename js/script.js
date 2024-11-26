@@ -67,6 +67,7 @@ function loadParticles(theme) {
         "interactivity": {
             "detect_on": "canvas",
             "events": {
+                "enable": false,
                 "onhover": {
                     "enable": false,
                 },
@@ -76,6 +77,7 @@ function loadParticles(theme) {
                 "resize": true
             },
             "modes": {
+                "enable": false,
                 "grab": {
                     "enable": false,
                     "distance": 400,
