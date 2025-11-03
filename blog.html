@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>alce.dev — blog</title>
+  <link rel="stylesheet" href="assets/css/terminal.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="window">
+      <header class="titlebar">
+        <div class="dots">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        </div>
+        <div class="title">alce.dev — blog</div>
+      </header>
+      <div class="screen">
+<pre id="blogList">
+<span class="muted"># ls ~/blog</span>
+</pre>
+      </div>
+      <footer class="statusline">
+        <span>© <span id="y"></span> Alan C.</span>
+        <nav class="tabs">
+          <a href="index.html">~/home</a>
+          <a href="blog.html" aria-current="page">~/blog</a>
+        </nav>
+      </footer>
+    </section>
+  </main>
+  <script src="js/posts.js"></script>
+  <script>
+    const out = document.getElementById('blogList');
+    const posts = (window.POSTS||[]).sort((a,b)=>new Date(b.date)-new Date(a.date));
+    posts.forEach(p=>{
+      const line = document.createElement('div');
+      line.innerHTML = `<span class="prompt">alan@alce</span>:<span class="path">~/blog</span>$ <a class="link" href="post.html?slug=${encodeURIComponent(p.slug)}">${p.date}  ${p.title}</a>`;
+      out.appendChild(line);
+    });
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

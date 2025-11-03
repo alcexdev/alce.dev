@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>alce.dev — post</title>
+  <link rel="stylesheet" href="assets/css/terminal.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="window">
+      <header class="titlebar">
+        <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="title" id="postTitle">alce.dev — post</div>
+      </header>
+      <div class="screen">
+<pre id="postBody"></pre>
+      </div>
+      <footer class="statusline">
+        <span>© <span id="y"></span> Alan C.</span>
+        <nav class="tabs">
+          <a href="index.html">~/home</a>
+          <a href="blog.html">~/blog</a>
+        </nav>
+      </footer>
+    </section>
+  </main>
+  <script src="js/posts.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const slug = params.get('slug');
+    const post = (window.POSTS||[]).find(p=>p.slug===slug);
+    const out = document.getElementById('postBody');
+    if(!post){ out.textContent='post not found'; }
+    else{
+      document.getElementById('postTitle').textContent = 'alce.dev — ' + post.title;
+      out.innerHTML = '';
+      const header = document.createElement('div');
+      header.innerHTML = `<span class="muted"># view</span>\n<span class="prompt">alan@alce</span>:<span class="path">~/blog</span>$ cat ${post.slug}.md\n`;
+      out.appendChild(header);
+      const body = document.createElement('div');
+      body.className = 'md';
+      body.innerHTML = post.html;
+      out.appendChild(body);
+    }
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

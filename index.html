@@ -1,110 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Alce</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=VT323&display=swap');
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="shortcut icon" type="image/png" href="img/icon.png"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>alce.dev — terminal</title>
+  <meta name="description" content="Alan C. — Term Style Portfolio" />
+  <link rel="stylesheet" href="styles/terminal.css" />
 </head>
 <body>
-    <div id="particles-js"></div>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <a href="#home" class="logo">Alce</a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="theme-toggle" id="theme-toggle">
-                    <div class="toggle-switch">
-                        <div class="toggle-circle"></div>
-                    </div>
-                </div>
-            </div>
+  <main class="wrap">
+
+    <section class="window">
+      <header class="titlebar">
+        <div class="dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="title">alce.dev</div>
+      </header>
+
+      <div class="screen">
+<pre>
+<span class="muted"># whoami</span>
+<span class="prompt">alan@alce</span>:<span class="path">~</span>$ Hi! I'm Alan — Student, Software Engineer, Linux Enthusiast.
+
+<span class="muted"># status</span>
+<span class="prompt">alan@alce</span>:<span class="path">~</span>$ BS in Computer Science in progress while working service desk.
+
+<span class="muted"># ls ~/projects</span>
+<span class="prompt">alan@alce</span>:<span class="path">~/projects</span>$
+  <!--
+  - Dashboard             <a href="?" class="link">[GitHub]</a>
+  - Proxmox Scripts       <a href="?" class="link">[GitHub]</a>
+  - 2D Game               <a href="?" class="link">[GitHub]</a>
+  -->
+<span class="muted"># cat ~/skills.txt</span>
+<span class="prompt">alan@alce</span>:<span class="path">~</span>$ Languages: C++, Python, JavaScript
+<span class="prompt">alan@alce</span>:<span class="path">~</span>$ Platforms: Linux, Proxmox, Docker, Ansible
+  <!--
+   - Update skills to display experience with each language and platform.
+  -->
+<span class="muted"># blog</span>
+<span class="prompt">alan@alce</span>:<span class="path">~</span>$ <a class="link" href="blog.html">open ./blog</a>
+  <!--
+   - Need to load most recent post here.
+  -->
+<span class="muted"># contact</span>
+<span class="prompt">alan@alce</span>:<span class="path">~</span>$ Email: <a class="link" href="mailto:hello@alce.dev">hello@alce.dev</a> · GitHub: <a class="link" href="https://github.com/alcexdev">alcexdev</a> · LinkedIn: <a class="link" href="https://linkedin.com/in/">profile</a>
+
+</pre>
+      </div>
+
+      <footer class="statusline">
+        <span>© <span id="y"></span> Alan C.</span>
+        <nav class="tabs">
+          <a href="index.html" aria-current="page">~/home</a>
+          <a href="blog.html">~/blog</a>
+          <a href="mailto:hello@alce.dev">~/contact</a>
         </nav>
-    </header>
+      </footer>
+    </section>
 
-    <main>
-        <section id="home" class="home">
-            <div class="home-content">
-                <div class="home-text">
-                    <h1>Hi! Welcome, I'm Alan!</h1>
-                    <p>Student | Support Engineer | Developer | Linux Enthusiast</p>
-                    <p>I'm a student of computer science focusing on software engineering. Currently, I'm working with C++, Javascript, and Python. I'm also experienced in web development, Linux, networking, and software engineering.</p>
-                    <div class="current-job">
-                        <i class="fa-solid fa-circle"></i>
-                        <p>Currently pursuing a Bachelor's degree in Computer Science while working as a service desk technician.</p>
-                    </div>
-                <!--
-                    <a href="#projects" class="scroll-btn">View My Projects</a>
-                -->
-                </div>
-                <div class="home-image">
-                    <img src="img/moose.png" alt="Styled Moose Logo" class="moose-image" id="moose-image">
-                </div>
-            </div>
-        </section>
-<!--
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="project-list">
-                
-                <div class="project card">
-                    <h3>Project 1</h3>
-                    <p>A brief description of the project...</p>
-                    <a href="#" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project card">
-                    <h3>Project 2</h3>
-                    <p>A brief description of the project...</p>
-                    <a href="#" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project card">
-                    <h3>Project 3</h3>
-                    <p>A brief description of the project...</p>
-                    <a href="#" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project card">
-                    <h3>Project 4</h3>
-                    <p>A brief description of the project...</p>
-                    <a href="#" target="_blank">View on GitHub</a>
-                </div>
-                
-            </div>
-        </section>
-        
-        <section id="homelab" class="homelab">
-            <h2>Homelab</h2>
-            <div class="homelab-content">
-                <div class="homelab-image">
-                    <img src="homelab.png" alt="Homelab Setup" class="homelab-img">
-                </div>
-                <div class="homelab-text">
-                    <p>Welcome to my homelab - my personal playground for technology exploration. Here, I experiment with different servers, networking equipment, and virtualization technologies to broaden my understanding and skills. My homelab consists of a range of devices, from simple Raspberry Pis to more robust servers running various services. This environment helps me tinker, learn, and apply knowledge in areas such as containerization, self-hosting applications, and network management. It’s an evolving part of my journey as a tech enthusiast and software engineer.</p>
-                </div>
-            </div>
-        </section>
--->
-        <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out with any opportunities or just a friendly chat!</p>
-            <div class="social-links">
-                <a href="https://github.com/alcexdev" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://bsky.app/profile/alcexdev.bsky.social" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
-                <a href="https://linkedin.com/in/alancedeno" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:alancedeno@outlook.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </section>
-    </main>
-
-    <script src="js/script.js"></script>
+  </main>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
